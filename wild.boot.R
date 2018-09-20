@@ -1,13 +1,11 @@
 ####################################################################
-## Residual bootstrap in linear regression                        ##
+## Wild bootstrap in linear regression                        ##
 ##    formula:  respons~covariate1+...+covariatep                 ##
 ##    B:  number of bootstrap re-samples                          ##
 ##    seed:  set the seed for simulation if you want to replicate ##
 ##    data:  name of dataset variables are in                     ##
 ##    distn:  distribution for wild bootstrap variables           ##
 ####################################################################
-
-
 wild.boot <- function(formula, B=1000, data=NULL, seed=NULL, distn="normal"){
 
   ###################################################
