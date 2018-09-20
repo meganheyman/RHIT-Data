@@ -6,7 +6,9 @@
 ##    data:  name of dataset variables are in                     ##
 ##    distn:  distribution for wild bootstrap variables           ##
 ####################################################################
-wild.boot <- function(formula, B=1000, data=NULL, seed=NULL, distn="normal"){
+
+
+wild.boot <- function(formula, B=1000, data=NULL, seed=NULL, bootDistn="normal"){
 
   ###################################################
   ## Checks for function inputs                    ##
@@ -54,9 +56,9 @@ wild.boot <- function(formula, B=1000, data=NULL, seed=NULL, distn="normal"){
   }
   
 
-  if(!( distn %in% c("normal","uniform","exponential","laplace","lognormal",
+  if(!( bootDistn %in% c("normal","uniform","exponential","laplace","lognormal",
                          "gumbel","t5","t8","t14") )){
-    stop("Invalid value for distn.")
+    stop("Invalid value for bootDistn.")
   }
   
   if(mode(B)!="numeric"){
@@ -148,6 +150,6 @@ wild.boot <- function(formula, B=1000, data=NULL, seed=NULL, distn="normal"){
   ## Returns
   #####################################################
   structure(invisible(list(bootEstParam=bootEstParam, 
-                           origEstParam=estParam, seed=seed, distn=distn)))
+                           origEstParam=estParam, seed=seed, bootDistn=bootDistn)))
 
 }
