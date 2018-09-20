@@ -1,5 +1,5 @@
 ####################################################################
-## Wild bootstrap in linear regression                        ##
+## Wild bootstrap in linear regression                            ##
 ##    formula:  respons~covariate1+...+covariatep                 ##
 ##    B:  number of bootstrap re-samples                          ##
 ##    seed:  set the seed for simulation if you want to replicate ##
