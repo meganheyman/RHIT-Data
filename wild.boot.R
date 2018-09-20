@@ -4,10 +4,9 @@
 ##    B:  number of bootstrap re-samples                          ##
 ##    seed:  set the seed for simulation if you want to replicate ##
 ##    data:  name of dataset variables are in                     ##
-##    distn:  distribution for wild bootstrap variables           ##
+##    bootDistn:  distribution for wild bootstrap variables       ##
 ####################################################################
-
-
+library(formula.tools)
 wild.boot <- function(formula, B=1000, data=NULL, seed=NULL, bootDistn="normal"){
 
   ###################################################
